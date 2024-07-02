@@ -6030,6 +6030,7 @@ button.bg-dark:hover {
 }
 .bg-white {
   background-color: #262749 !important;
+  border: 0.5px solid #f76b45;
 }
 .bg-transparent {
   background-color: transparent !important;

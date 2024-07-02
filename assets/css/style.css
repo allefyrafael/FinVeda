@@ -1016,6 +1016,7 @@ p {
   font-size: 38px;
   font-weight: 300;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 .header-hero-content-m .header-sub-title {
@@ -1791,6 +1792,7 @@ p {
   box-shadow: 0px 0px 18px 0px rgba(50, 77, 215, 0.14);
   border-radius: 10px;
   background-color: #262749;
+  border: 0.5px #f76b45 solid ;
 }
 
 @media (max-width: 767px) {
