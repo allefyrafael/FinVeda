@@ -13,6 +13,36 @@ const convertors = {
   },
 };
 
+const averagesLabels = {
+  under: {
+    text: "subprecificado",
+    style: "color: #1abc9c;"
+  },
+  average: {
+    text: "preço justo",
+    style: "color: #ecf0f1;"
+  },
+  over: {
+    text: "sobreprecificado",
+    style: "color: #e74c3c;"
+  }
+}
+
+function generateAverageRange(average) {
+
+  return { min: average - average * 0.1, max: average + average * 0.1 }
+}
+
+function returnLabel(minAndMax, value) {  
+  if (value >= minAndMax.min && value <= minAndMax.max) {
+    return "average"
+  } else if(value < minAndMax.min) {
+    return "under"
+  } else {
+    return "over"
+  }
+}
+
 function convertMetersToFeet(value) {
   return value * 3.28084;
 }
@@ -34,6 +64,8 @@ handlePredict = async () => {
   const url =
     "http://localhost:5000";
 
+    
+
   try {
     const response = await fetch(`${url}/predict_home_price`, {
       method: "POST",
@@ -45,10 +77,7 @@ handlePredict = async () => {
 
     
 
-    const parsedResponse = await response.json()
-    console.log("parsedResponse", parsedResponse)
-
-    console.log("parsedResponse", parsedResponse)
+    const parsedResponse = await response.json()    
     const estimatedPrice = parseFloat(parsedResponse.estimated_price);    
 
     if (!parsedResponse.estimated_price) {
@@ -60,7 +89,13 @@ handlePredict = async () => {
     const convertedHousePrice = convertors[currency](
       estimatedPrice * lahkValue
     );
-    responseDiv.innerHTML =`<p class="text" style='text-align: center;'>${currency === "real" ? "R$" : "U$"} ${convertedHousePrice.toFixed(2).toString().replaceAll(".", ",")}</p>`
+    const referencePrice = currency === "real" ?  651217 :  115123.12
+    console.log("convertedHousePrice", convertedHousePrice)
+    const averageRange = generateAverageRange(referencePrice)
+    console.log("averageRange", averageRange )
+    const labels = returnLabel(averageRange, referencePrice)    
+
+    responseDiv.innerHTML =`<p class="text" style='text-align: center;${averagesLabels[labels].style}'>${currency === "real" ? "R$" : "U$"} ${convertedHousePrice.toFixed(2).toString().replaceAll(".", ",")} ${averagesLabels[labels].text}</p>`
   } catch (error) {
     console.error("[ERROR] handlePredict", error);
   }

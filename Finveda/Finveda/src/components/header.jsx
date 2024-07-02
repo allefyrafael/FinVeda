@@ -130,7 +130,7 @@ function header(){
                 data-wow-delay="1.4s"
                 >
                 <div className="anim" data-tilt="">
-                  <img src="assets/images/header-hero.png" alt="hero" style="animation: float 1.5s ease-in-out infinite;" data-tilt="" />
+                  <img src="assets/images/web-scrapping.gif" alt="hero" style="animation: float 1.5s ease-in-out infinite;" data-tilt="" />
                 </div>
               </div>
             </div>
