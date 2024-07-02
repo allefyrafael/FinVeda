@@ -13,6 +13,10 @@ const convertors = {
   },
 };
 
+function convertMetersToFeet(value) {
+  return value * 3.28084;
+}
+
 handlePredict = async () => {
   const currency = document.getElementById("currency").value;
   const areaInSquareMeters = document.getElementById("area").value;
@@ -20,16 +24,38 @@ handlePredict = async () => {
   const bathroomsNumber = document.getElementById("bathrooms").value;
   const location = document.getElementById("location").value;
 
-  // try {
-  //   const response = await fetch(
-  //     "https://dadosabertos.camara.leg.br/api/v2/deputados/91228"
-  //   );
-  //   if (response.ok) {
-  //     console.log("opened", await response.json());
-  //   }
-  // } catch (error) {
-  //   console.error("[ERROR] handlePredict", error);
-  // }
+  const formBody = `total_sqft=${encodeURIComponent(
+    convertMetersToFeet(parseFloat(areaInSquareMeters))
+  )}&location=${encodeURIComponent(location)}&bhk=${encodeURIComponent(
+    roomsNumber
+  )}&bath=${encodeURIComponent(bathroomsNumber)}`;
+
+  const url =
+    "https://f1e4-2804-14c-65c1-5013-5851-38ca-7dec-a7f4.ngrok-free.app/get_location_names";
+
+  try {
+    const response = fetch(`${url}/predict_home_price`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formBody,
+    });
+
+    if (!parsedResponse.data.estimated_price) {
+      throw new Error("Preço estimado não retornado!");
+    }
+
+    const parsedResponse = await response.json();
+    const estimatedPrice = parseFloat(parsedResponse.data.estimated_price);
+
+    const lahkValue = 100000;
+    const convertedHousePrice = convertors[currency](
+      estimatedPrice * lahkValue
+    );
+  } catch (error) {
+    console.error("[ERROR] handlePredict", error);
+  }
 };
 
 currencyChange = () => {
