@@ -79,53 +79,26 @@
                 <span class="toggler-icon"></span>
                 <span class="toggler-icon"></span>
                 </button>
-                <div
-                  class="collapse navbar-collapse sub-menu-bar"
-                  id="navbarSupportedContent"
-                  >
-                  <ul id="nav" class="navbar-nav ml-auto">
-                    <li class="nav-item" >
-                      <a class="page-scroll" href="../index.html">Home 🏡</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="page-scroll" href="../trends.html">Mercado 📈</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="page-scroll" href="sip.html" id="active-page">Ferramentas 🔧</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="page-scroll" href="../blog.html">Sobre Nós 📰</a>
-                    </li>
-                    
-                  </ul>
+                <div class="div-imagem"><img class="imagem" src="../assets/images/Habita_AI_-_Logo-removebg-preview.png" alt=""></div>
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <div>
+                  <img class="imagem-pequena" src="../assets/images/Habita_AI_-_Logo-removebg-preview.png" alt="">
+                  
                 </div>
-                <div class="navbar-btn d-none d-sm-inline-block">
-                  <!-- Login Modal -->
-               <div id="myModal" class="modal">
-                <div class="modal-content">
-                  <span class="close" style="display: flex; justify-content: right;">&times;</span>
-                  <div class="mt-3">
-                    <h3 class="join">Login to join us....</h3>
-                    <form class="px-3 py-4">
-                      <div class="form-group">
-                        <label class="d-flex">Username</label>
-                        <input type="text" placeholder="Username" class="form-control"/>
-                      </div>
-                      <div class="form-group">
-                        <label class="d-flex">Password</label>
-                        <input type="password" placeholder="Password" class="form-control"/>
-                      </div>
-                      <div class="form-check d-flex">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">Remember me</label>
-                      </div>
-                    </form>
-                    <button class="main-btn mt-2 w-100 mb-3">Sign in</button>
-                    <p class="text-center">Don't have an account? <a href="#" id="registerLink">Register</a></p>
-                  </div>
-                </div>
-              </div>                            
-                </div>
+                  <!-- Itens do Menu -->
+                <ul id="nav" class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./index.html">Home 🏡</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="page-scroll" href="./trends.html" >Mercado 📈</a>
+                  </li>
+                  <li  class="nav-item active">
+                    <a class="page-scroll" href="./tools/sip.html"  id="active-page">Ferramentas 🔧</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
               </nav>
             </div>
           </div>
@@ -233,170 +206,12 @@
           Calcular
           </button>
         </div>
-        </br/>
-        <div style="display: flex;">
-          <div class="result"><b>Resultado :</b></div>
-          <div class="result-container">
-            <div>Investimento Mensal para <span id="mode-1">SIP</span></div>
-            <div><span>Rs.</span>&nbsp;<span id="input-1"></span></div>
-            <br/>
-            <div>Número por ano(s)<span id="mode-2">SIP</span></div>
-            <div><span>Ano(s):</span>&nbsp;<span id="input-2"></span></div>
-            <br/>
-            <div>Taxa de retorno esperada <span id="mode-3">SIP</span></div>
-            <div><span>%:</span>&nbsp;<span id="input-3"></span></div>
           </div>
          
         </div>
       </div>
       </div>
-      <!-- EMI Calculator -->
-      <script src="emiCalculator.js"></script>
-      <div class="header" style="padding-top: 100px;">
-        <h3>Calculadora de EMI</h3>
-      </div>
-      <div class="page-container shadow p-5 mb-5 bg-white rounded mt-5">
-          <div class="input-container">
-              <div>
-                  <div><b>Valor do empréstimo (INR)</b></div>
-                  <div><input class="form-control" id="loanAmount" type="number" style="margin: 1% 5% 0 0"/></div>
-                  <br/>
-                  <div><b>Taxa de juros(%)</b></div>
-                  <div><input class="form-control" id="interestRate" type="number"/></div>
-                  <br/>
-                  <div><b>Prazo do empréstimo (meses)</b></div>
-                  <div><input class="form-control" id="loanTenure" type="number"/></div>
-              </div>
-          </div>
-          </br/>
-          <div class="btn-calculate">
-              <button class="btn btn-success" type="button" onclick="calculateEMI()">Calcular EMI</button>
-          </div>
-          </br/>
-          <div style="display: flex;">
-              <div class="result"><b>Resultado :</b></div>
-              <div class="result-container">
-                  <div>EMI mensal</div>
-                  <div><span id="monthlyEMI"></span></div>
-                  <br/>
-                  <div>Total Pago</div>
-                  <div><span id="totalPayment"></span></div>
-                  <br/>
-                  <div>Juros totais pagos</div>
-                  <div><span id="totalInterestPaid"></span></div>
-              </div>
-          </div>
-      </div>
-    </div>
-    <!-- End EMI Calculator -->
-
-      <!-- Insurance Calculator -->
-      <script src="insuranceCalculator.js"></script>
-      <div class="header" style="padding-top: 100px;">
-        <h3>Calculadora de Seguros</h3>
-      </div>
-      <div class="page-container">
-          <div class="input-container">
-              <div>
-                  <div><b>Soma garantida (INR)</b></div>
-                  <div><input id="Sumassured" type="number" style="margin: 1% 5% 0 0"/></div>
-                  <br/>
-                  <div><b>Prazo da apólice (anos)</b></div>
-                  <div><input id="Policyterm" type="number"/></div>
-                  <br/>
-                  <div><b>Prêmio anual (%)</b></div>
-                  <div><input id="Annualpremium" type="number"/></div>
-                  <br/>
-                  <div><b>Bônus Reversível (%)</b></div>
-                  <div><input id="ReversionaryBonus" type="number"/></div>
-                  <br/>
-                  <div><b>Bônus Terminal (%)</b></div>
-                  <div><input id="TerminalBonus" type="number"/></div>
-                  <br/>
-                  <div style="display: flex;">
-                    <input name="check" id="surrendered" type="radio" style="width: 20px;"/>Inicio do Seguro
-                    <input name="check" id="death" type="radio" style="width: 20px;"/>Final do Seguro
-                  </div>
-                  <br/>
-              </div>
-          </div>
-          </br/>
-          <div class="btn-calculate">
-              <button type="button" style="width: 11rem;" onclick="calculateInsurance()">Calcular Seguro</button>
-          </div>
-          </br/>
-          <div style="display: flex;">
-              <div class="result"><b>Resultado :</b></div>
-              <div class="result-container">
-                  <div>Bônus Reversível</div>
-                  <div><span id="ReversionaryBonusAmt"></span></div>
-                  <br/>
-                  <div>Bônus de terminal</div>
-                  <div><span id="TerminalBonusAmt"></span></div>
-                  <br/>
-                  <div>Bônus Total</div>
-                  <div><span id="TotalBonus"></span></div>
-                  <br/>
-                  <div>Prêmio Total Pago </div>
-                  <div><span id="TotalPremium"></span></div>
-                  <br>
-                  <div>Ganho líquido</div>
-                  <div><span id="netGain"></span></div>
-              </div>
-          </div>
-      </div>
-    </div>
-    
-    <!-- End Insurance Calculator -->
-
-    <!-- NPV Calculator -->
-    <script src="npvCalculator.js" defer></script>
-    <div class="header" style="padding-top: 100px;">
-      <h3>Calculadora de Valor Presente Líquido (VPL)</h3>
-      <h6 style="text-align: left; margin: 1% 20%; padding-left: 50px;">A Calculadora de Valor Presente Líquido (VPL) é uma ferramenta projetada para ajudar você a avaliar </h6>
-      <p style="text-align: left; margin: 1% 20%; padding-left: 50px;">
-        1. <b>Investimento Inicial: </b>Insira o valor do seu investimento inicial. <br>
-        2. <b></b> Enter the discount rate, which represents the rate of return required to make the investment worthwhile.<br>
-        3. <b>Cash Flows:</b> Add the expected cash flows for each year of the investment. You can add multiple cash flow inputs for different years and remove any as needed.<br>
-        4. <b>Calculate NPV:</b> Once all inputs are provided, click the 'Calculate NPV' button to compute the net present value. The result will display the NPV, indicating the potential profitability of your investment.<br>
-      </p>
-      <h6 style="text-align: left; margin: 1% 20%; padding-left: 50px;">This calculator helps investors make informed decisions by considering the time value of money, ensuring that future cash flows are accurately evaluated in today's terms.</h6>
-      
-    </div>
-    <div class="page-container shadow p-5 mb-5 bg-white rounded mt-5">
-      <div class="input-container">
-          <div>
-            <div><b>Initial Investment (INR)</b></div>
-            <div><input class="form-control" id="initialInvestment" type="number" style="margin: 1% 5% 0 0"/></div>
-            <br/>
-            <div><b>Discount Rate (%)</b></div>
-            <div><input class="form-control" id="discountRate" type="number"/></div>
-          </div>
-      </div>
-      <br/>
-      <div class="cash-flows-container">
-        <div><b>Cash Flow</b></div>
-        <div id="cashFlows">
-          <!-- Cash flow inputs will be added here dynamically -->
-        </div>
-        <div class="npv-calculate">
-          <button type="button" onclick="addCashFlow()">+ Add Year</button>
-        </div>
-      </div>
-      <br/>
-      <div class="btn-calculate">
-        <button class="btn btn-success" type="button" onclick="calculateNPV()">Calculate</button>
-      </div>
-      <br/>
-      <div style="display: flex;">
-        <div class="nresult"><b>Result :</b></div>
-        <div class="nresult-container">
-          <div>NPV</div>
-          <div><span id="NPV_result">Rs.</span>&nbsp;<span id="npvResult"></span></div>
-        </div>
-      </div>
-    </div>
-    <!-- End NPV Calculator -->
+     
 
   </body>
   <footer id="footer" class="footer-area pt-120">

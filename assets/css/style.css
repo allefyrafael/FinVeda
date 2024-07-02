@@ -3,7 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #6a6972;
+  color: #72696f;
   overflow-x: hidden;
 }
 
@@ -1015,7 +1015,13 @@ max-height: 80px;
 }
 
 .header-hero-content .header-sub-title {
-  margin-top: 100px;
+  font-size: 38px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.header-hero-content-m .header-sub-title {
+  margin-top: 60px;
   font-size: 38px;
   font-weight: 300;
   color: #fff;
