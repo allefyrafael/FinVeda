@@ -610,6 +610,16 @@ p {
   float: left;
 }
 
+.imagem{
+max-width: 80px;
+max-height: 80px;
+}
+.imagem-pequena{
+  max-width: 50px;
+  max-height: 50px;
+  display: none;
+  }
+
 .nav-item a {
   display: block;
   color: white;
@@ -929,6 +939,9 @@ p {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+  .imagem-pequena{
+  display: block;
   }
 }
 
