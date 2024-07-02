@@ -23,6 +23,7 @@ handlePredict = async () => {
   const roomsNumber = document.getElementById("rooms").value;
   const bathroomsNumber = document.getElementById("bathrooms").value;
   const location = document.getElementById("location").value;
+  const responseDiv = document.getElementById("response");
 
   const formBody = `total_sqft=${encodeURIComponent(
     convertMetersToFeet(parseFloat(areaInSquareMeters))
@@ -31,10 +32,10 @@ handlePredict = async () => {
   )}&bath=${encodeURIComponent(bathroomsNumber)}`;
 
   const url =
-    "https://f1e4-2804-14c-65c1-5013-5851-38ca-7dec-a7f4.ngrok-free.app/get_location_names";
+    "http://localhost:5000";
 
   try {
-    const response = fetch(`${url}/predict_home_price`, {
+    const response = await fetch(`${url}/predict_home_price`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -42,17 +43,24 @@ handlePredict = async () => {
       body: formBody,
     });
 
-    if (!parsedResponse.data.estimated_price) {
-      throw new Error("Preço estimado não retornado!");
-    }
+    
 
-    const parsedResponse = await response.json();
-    const estimatedPrice = parseFloat(parsedResponse.data.estimated_price);
+    const parsedResponse = await response.json()
+    console.log("parsedResponse", parsedResponse)
+
+    console.log("parsedResponse", parsedResponse)
+    const estimatedPrice = parseFloat(parsedResponse.estimated_price);    
+
+    if (!parsedResponse.estimated_price) {
+      throw new Error("Preço estimado não retornado!");
+      responseDiv.innerHTML = "<p class='text' style='text-align: center;'>Erro inesperado durante a predição, tente mais tarde...</p>"
+    }
 
     const lahkValue = 100000;
     const convertedHousePrice = convertors[currency](
       estimatedPrice * lahkValue
     );
+    responseDiv.innerHTML =`<p class="text" style='text-align: center;'>${currency === "real" ? "R$" : "U$"} ${convertedHousePrice.toFixed(2).toString().replaceAll(".", ",")}</p>`
   } catch (error) {
     console.error("[ERROR] handlePredict", error);
   }
