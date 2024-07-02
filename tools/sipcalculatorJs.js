@@ -90,12 +90,15 @@ handlePredict = async () => {
       estimatedPrice * lahkValue
     );
     const referencePrice = currency === "real" ?  651217 :  115123.12
-    console.log("convertedHousePrice", convertedHousePrice)
     const averageRange = generateAverageRange(referencePrice)
-    console.log("averageRange", averageRange )
-    const labels = returnLabel(averageRange, referencePrice)    
+    const labels = returnLabel(averageRange, referencePrice) 
 
-    responseDiv.innerHTML =`<p class="text" style='text-align: center;${averagesLabels[labels].style}'>${currency === "real" ? "R$" : "U$"} ${convertedHousePrice.toFixed(2).toString().replaceAll(".", ",")} ${averagesLabels[labels].text}</p>`
+    const usFormatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+    const brFormatter = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+    const selectedFormatter = currency === "real" ? brFormatter : usFormatter;
+
+
+    responseDiv.innerHTML =`<p class="text" style='text-align: center;${averagesLabels[labels].style}'>${selectedFormatter.format(convertedHousePrice)} ${averagesLabels[labels].text}</p>`
   } catch (error) {
     console.error("[ERROR] handlePredict", error);
   }
