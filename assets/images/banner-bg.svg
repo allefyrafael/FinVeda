@@ -1,18 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920.183" height="1075.636" viewBox="0 0 1920.183 1075.636">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#361cc1"/>
-      <stop offset="1" stop-color="#2e82ef"/>
-    </linearGradient>
-    <clipPath id="clip-path">
-      <path id="Path_199" data-name="Path 199" d="M-533.031,278.516s95.269,204.193,401.21,161.147,419.656-32.1,544.188,96.892,343.977,107.54,572.909,67.066,360.19,68.158,401.79,142.968c.041-2.4-.074-1075.621-.074-1075.621l-1920,.011Z" transform="translate(533 329)" fill="url(#linear-gradient)"/>
-    </clipPath>
-  </defs>
-  <g id="Group_112" data-name="Group 112" transform="translate(0.089 0.042)">
-    <path id="Path_195" data-name="Path 195" d="M-533.089,278.364s100.43,239.944,401.206,191.477,442.068,9.577,537.63,114.941,352.091,94.329,580.987,52.374S1349.9,678.95,1387.094,746.594c.016.016-.373-1075.609-.373-1075.609l-1919.766-.027Z" transform="translate(533 329)" opacity="0.11" fill="url(#linear-gradient)"/>
-    <path id="Path_194" data-name="Path 194" d="M-533.031,278.516s95.269,204.193,401.21,161.147,419.656-32.1,544.188,96.892,343.977,107.54,572.909,67.066,360.19,68.158,401.79,142.968c.041-2.4-.074-1075.621-.074-1075.621l-1920,.011Z" transform="translate(533 329)" fill="url(#linear-gradient)"/>
-    <g id="Mask_Group_6" data-name="Mask Group 6" clip-path="url(#clip-path)">
-      <path id="Path_4" data-name="Path 4" d="M-496.368,321.285S-322.126-70.761,321.065,66.253s869.415,77.467,1056.161-463.982" transform="translate(522 366.416)" fill="none" stroke="#361cc1" stroke-width="128" opacity="0.14"/>
+<svg width="1921" height="1076" viewBox="0 0 1921 1076" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_2)">
+    <path opacity="0.11"
+      d="M0 607.406C0 607.406 100.43 847.35 401.206 798.883C701.982 750.416 843.274 808.46 938.836 913.824C1034.4 1019.19 1290.93 1008.15 1519.82 966.198C1748.72 924.243 1882.99 1007.99 1920.18 1075.64C1920.2 1075.65 1919.81 0.0269775 1919.81 0.0269775L0.0440063 0L0 607.406Z"
+      fill="url(#paint0_linear_1_2)" />
+    <path
+      d="M0.0579834 607.558C0.0579834 607.558 95.327 811.751 401.268 768.705C707.209 725.659 820.924 736.605 945.456 865.597C1069.99 994.589 1289.43 973.137 1518.36 932.663C1747.3 892.189 1878.56 1000.82 1920.16 1075.63C1920.2 1073.23 1920.08 0.0100098 1920.08 0.0100098L0.0809937 0.0210266L0.0579834 607.558Z"
+      fill="url(#paint1_linear_1_2)" />
+    <mask id="mask0_1_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+      width="1921" height="1076">
+      <path
+        d="M0.0579834 607.558C0.0579834 607.558 95.327 811.751 401.268 768.705C707.209 725.659 820.924 736.605 945.456 865.597C1069.99 994.589 1289.43 973.137 1518.36 932.663C1747.3 892.189 1878.56 1000.82 1920.16 1075.63C1920.2 1073.23 1920.08 0.0100098 1920.08 0.0100098L0.0809937 0.0210266L0.0579834 607.558Z"
+        fill="white" />
+    </mask>
+    <g mask="url(#mask0_1_2)">
+      <path opacity="0.14"
+        d="M25.721 687.743C25.721 687.743 199.963 295.697 843.154 432.711C1486.34 569.725 1712.57 510.178 1899.31 -31.271"
+        stroke="#F0932B" stroke-width="128" />
     </g>
   </g>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="960.092" y1="0" x2="960.092" y2="1075.64"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#361CC1" />
+      <stop offset="1" stop-color="#2E82EF" />
+    </linearGradient>
+    <linearGradient id="paint1_linear_1_2" x1="960.111" y1="0.0100098" x2="960.111" y2="1075.63"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30336B" />
+      <stop offset="1" stop-color="#262749" />
+    </linearGradient>
+    <clipPath id="clip0_1_2">
+      <rect width="1920.18" height="1075.64" fill="white" />
+    </clipPath>
+  </defs>
 </svg>

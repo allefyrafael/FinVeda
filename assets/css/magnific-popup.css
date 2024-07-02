@@ -113,7 +113,7 @@
   color: #ccc;
 }
 .mfp-preloader a:hover {
-  color: #fff;
+  color: #262749;
 }
 
 .mfp-s-ready .mfp-preloader {
@@ -155,7 +155,7 @@ button::-moz-focus-inner {
   text-align: center;
   opacity: 0.65;
   padding: 0 0 18px 10px;
-  color: #fff;
+  color: #262749;
   font-style: normal;
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
@@ -174,7 +174,7 @@ button::-moz-focus-inner {
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color: #fff;
+  color: #ecf0f1;
   right: -6px;
   text-align: right;
   padding-right: 6px;
@@ -237,7 +237,7 @@ button::-moz-focus-inner {
   left: 0;
 }
 .mfp-arrow-left:after {
-  border-right: 17px solid #fff;
+  border-right: 17px solid #262749;
   margin-left: 31px;
 }
 .mfp-arrow-left:before {
@@ -249,7 +249,7 @@ button::-moz-focus-inner {
   right: 0;
 }
 .mfp-arrow-right:after {
-  border-left: 17px solid #fff;
+  border-left: 17px solid #262749;
   margin-left: 39px;
 }
 .mfp-arrow-right:before {

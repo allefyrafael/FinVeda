@@ -114,7 +114,7 @@ $(function () {
           type: "circle",
           stroke: {
             width: 0,
-            color: "#fff",
+            color: "#262749",
           },
           polygon: {
             nb_sides: 5,
@@ -226,7 +226,7 @@ $(function () {
           type: "circle",
           stroke: {
             width: 0,
-            color: "#fff",
+            color: "#262749",
           },
           polygon: {
             nb_sides: 5,
